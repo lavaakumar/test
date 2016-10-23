@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap-css@*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link rel="stylesheet" href="Content/editstyle.css" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css"> 
+      <!--<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+      <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>-->
+      <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+      <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-touch.js"></script>
+      <script src="Scripts/ui-grid.js"></script>
+    <script src="editUIgridscript.js"></script>
+  </head>
+
+  <body ng-app="app" class="container">
+    <div class="row col-lg-12" ng-controller="gridCtrl">
+      <div ui-grid="gridOptions" ui-grid-move-columns="" ui-grid-edit="" ui-grid-row-edit="" ui-grid-selection="" ui-grid-expandable="" ui-grid-cellNav="" class="grid" style="height:800px"></div>
+        <input type="button" name="btnsubmit" ng-click="SendData(gridOptions.data)" value="Submit" />
+    </div>
+  </body>
+
+</html>
